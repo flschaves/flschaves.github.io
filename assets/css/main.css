@@ -86,7 +86,7 @@ h1 {
     padding: 8px;
     text-decoration: none;
 }
-.link .fa {
+.link [class*="fa"] {
     font-size: 2em;
     vertical-align: middle;
     margin-right: 5px;
