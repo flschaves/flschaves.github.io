@@ -37,7 +37,8 @@ google_analytics: UA-50383040-1
 
 # Build settings
 markdown: kramdown
-permalink: /blog/:title
+highlighter: rouge
+permalink: /blog/:title/
 
 plugins:
   - jekyll-seo-tag
