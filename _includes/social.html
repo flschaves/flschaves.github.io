@@ -1,0 +1,17 @@
+{%- assign social = site.social_links -%}
+
+<ul class="social-media-list">
+  {%- if social.dribbble -%}<li><a href="https://dribbble.com/{{ social.dribbble | cgi_escape | escape }}" title="{{ social.dribbble | escape }}" target="_blank"><i class="fab fa-dribble"></i></a></li>{%- endif -%}
+  {%- if social.facebook -%}<li><a href="https://www.facebook.com/{{ social.facebook | cgi_escape | escape }}" title="{{ social.facebook | escape }}" target="_blank"><i class="fab fa-facebook-f"></i></a></li>{%- endif -%}
+  {%- if social.flickr -%}<li><a href="https://www.flickr.com/photos/{{ social.flickr | cgi_escape | escape }}" title="{{ social.flickr | escape }}" target="_blank"><i class="fab fa-flickr"></i></a></li>{%- endif -%}
+  {%- if social.github -%}<li><a href="https://github.com/{{ social.github | cgi_escape | escape }}" title="{{ social.github | escape }}" target="_blank"><i class="fab fa-github"></i></a></li>{%- endif -%}
+  {%- if social.instagram -%}<li><a href="https://www.instagram.com/{{ social.instagram | cgi_escape | escape }}" title="{{ social.instagram | escape }}" target="_blank"><i class="fab fa-instagram"></i></a></li>{%- endif -%}
+  {%- if social.linkedin -%}<li><a href="https://www.linkedin.com/in/{{ social.linkedin | cgi_escape | escape }}" title="{{ social.linkedin | escape }}" target="_blank"><i class="fab fa-linkedin"></i></a></li>{%- endif -%}
+  {%- if social.pinterest -%}<li><a href="https://www.pinterest.com/{{ social.pinterest | cgi_escape | escape }}" title="{{ social.pinterest | escape }}" target="_blank"><i class="fab fa-pinterest"></i></a></li>{%- endif -%}
+  {%- if social.twitter -%}<li><a href="https://twitter.com/{{ social.twitter | cgi_escape | escape }}" title="{{ social.twitter | escape }}" target="_blank"><i class="fab fa-twitter"></i></a></li>{%- endif -%}
+  {%- if social.youtube -%}<li><a href="https://www.youtube.com/{{ social.youtube | cgi_escape | escape }}" title="{{ social.youtube | escape }}" target="_blank"><i class="fab fa-youtube"></i></a></li>{%- endif -%}
+  {%- if social.youtube_channel -%}<li><a href="https://www.youtube.com/channel/{{ social.youtube_channel | cgi_escape | escape }}" title="{{ social.youtube_channel_name | escape | default: 'YouTube' }}" target="_blank"><i class="fab fa-youtube"></i></a></li>{%- endif -%}
+  {%- if social.telegram -%}<li><a href="https://t.me/{{ social.telegram | cgi_escape | escape }}" title="{{ social.telegram | escape }}" target="_blank"><i class="fab fa-telegram"></i></a></li>{%- endif -%}
+  {%- if social.wordpress_profile -%}<li><a href="https://profiles.wordpress.org/{{ social.wordpress_profile | cgi_escape | escape }}" title="{{ social.wordpress_profile | escape }}" target="_blank"><i class="fab fa-wordpress-simple"></i></a></li>{%- endif -%}
+  {%- if social.rss -%}<li><a href="{{ 'feed.xml' | relative_url }}" title="{{ social.rss | escape }}" target="_blank"><i class="fab fa-rss"></i></a></li>{%- endif -%}
+</ul>

@@ -1,0 +1,385 @@
+/**
+ * Brand
+ */
+.brand-color {
+  color: $brand-color;
+}
+
+/**
+ * Page layouts
+ */
+.home {
+  background: {
+    image: url('../images/background.jpg');
+    size: cover;
+  }
+  .page-content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+/**
+ * Site header
+ */
+.site-header {
+  background-color: $grey-color;
+  min-height: $spacing-unit * 1.865;
+  padding: {
+    left: $spacing-unit / 2;
+    right: $spacing-unit / 2;
+  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+
+  .home & {
+    background-color: rgba( $grey-color-dark, 0.5 );
+  }
+}
+
+.site-title {
+  @include relative-font-size(1.625);
+  font-weight: 300;
+  line-height: $base-line-height * $base-font-size * 2.25;
+  margin-bottom: 0;
+  float: left;
+  color: $text-color;
+  font-family: $brand-font-family;
+
+  &,
+  &:hover {
+    text-decoration: none;
+  }
+
+  &,
+  &:visited {
+    color: $text-color;
+  }
+}
+
+.site-nav {
+  float: right;
+  line-height: $base-line-height * $base-font-size * 2.25;
+  font-family: $brand-font-family;
+
+
+  .nav-trigger {
+    display: none;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .page-link {
+    color: $text-color;
+    line-height: $base-line-height;
+    @include relative-font-size(1.2);
+
+    // Gaps between nav items, but not on the last one
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    &,
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  @include media-query($on-palm) {
+    position: absolute;
+    top: $spacing-unit / 2;
+    right: $spacing-unit / 2;
+    text-align: right;
+
+    label[for="nav-trigger"] {
+      display: block;
+      float: right;
+      width: 36px;
+      height: 36px;
+      z-index: 2;
+      cursor: pointer;
+    }
+
+    .menu-icon {
+      display: block;
+      float: right;
+      width: 36px;
+      height: 26px;
+      line-height: 0;
+      padding-top: 10px;
+      text-align: center;
+
+      > svg {
+        fill: $text-color;
+      }
+    }
+
+    input ~ .trigger {
+      clear: both;
+      display: none;
+    }
+
+    input:checked ~ .trigger {
+      display: block;
+      padding-bottom: 5px;
+      background-color: $grey-color;
+    }
+
+    .page-link {
+      display: block;
+      padding: 5px 10px;
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+      margin-left: 20px;
+    }
+  }
+}
+
+
+
+/**
+ * Site footer
+ */
+.site-footer {
+  background-color: $grey-color;
+  padding: $spacing-unit / 2;
+
+  .home & {
+    background-color: rgba( $grey-color-dark, 0.5 );
+  }
+}
+
+.social-media-list {
+  list-style: none;
+  margin-left: 0;
+  margin-bottom: 0;
+  text-align: right;
+
+  @include media-query($on-palm) {
+    text-align: center;
+  }
+
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    & + li {
+      margin-left: $spacing-unit / 2;
+    }
+    i {
+      color: $text-color;
+    }
+  }
+}
+
+.footer-col-wrapper {
+  color: $text-color;
+  margin: {
+    left: -$spacing-unit / 2;
+    right: -$spacing-unit / 2;
+  }
+  @extend %clearfix;
+}
+
+.footer-col {
+  width: 50%;
+  padding: {
+    left: $spacing-unit / 2;
+    right: $spacing-unit / 2;
+  }
+}
+
+@include media-query($on-laptop) {
+  .footer-col {
+    width: 50%;
+  }
+}
+
+@include media-query($on-palm) {
+  .footer-col {
+    float: none;
+    width: 100%;
+    &-1 {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: $on-medium) {
+  .footer-col {
+    float: left;
+  }
+}
+
+
+/**
+ * Page content
+ */
+.page-content {
+  margin-top: $base-line-height * $base-font-size * 2.25 - 1;
+  padding: $spacing-unit 0;
+  overflow: hidden;
+  flex: 1;
+}
+
+.page-heading {
+  @include relative-font-size(2);
+}
+
+.post-list-heading {
+  @include relative-font-size(1.75);
+}
+
+.post-list {
+  margin-left: 0;
+  list-style: none;
+
+  > li {
+    margin-bottom: $spacing-unit;
+  }
+}
+
+.post-meta {
+  @include relative-font-size(0.875);
+  color: $text-color;
+  text-align: center;
+  margin: 0;
+
+  @include media-query($on-medium) {
+    @include relative-font-size(0.7);
+  }
+}
+
+.post-link {
+  display: block;
+  @include relative-font-size(1.5);
+
+  @include media-query($on-medium) {
+    @include relative-font-size(1.2);
+  }
+}
+
+/**
+ * Profile
+ */
+.profile {
+  text-align: center;
+  color: $text-color;
+  &__image {
+    border-radius: 50%;
+    max-width: 150px;
+    border: 5px solid $grey-color-light;
+    margin-bottom: $spacing-unit;
+  }
+  &__name {
+    font-size: 32px;
+    line-height: 36px;
+    margin-bottom: $spacing-unit / 2;
+  }
+  &__description {
+    max-width: 390px;
+  }
+} 
+
+/**
+ * Posts
+ */
+.post-header {
+  padding: $spacing-unit 0;
+  margin-top: $spacing-unit * -1;
+  margin-bottom: $spacing-unit;
+  position: relative;
+
+  @include media-query($on-medium) {
+
+  }
+}
+
+.post-image {
+  position: absolute;
+  top: 0;
+  left: -200%;
+  z-index: -1;
+  height: 100%;
+  width: 500%;
+  
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.post-title {
+  @include relative-font-size(2.625);
+  line-height: 1.4;
+  text-align: center;
+
+  @include media-query($on-laptop) {
+    @include relative-font-size(2.25);
+  }
+
+  @include media-query($on-medium) {
+    @include relative-font-size(1.4);
+  }
+}
+
+.post-content {
+  margin-bottom: $spacing-unit;
+
+  h2 {
+    @include relative-font-size(2);
+    font-weight: 700;
+
+    @include media-query($on-laptop) {
+      @include relative-font-size(1.75);
+    }
+  }
+
+  h3 {
+    @include relative-font-size(1.625);
+    font-weight: 700;
+
+    @include media-query($on-laptop) {
+      @include relative-font-size(1.375);
+    }
+  }
+
+  h4 {
+    @include relative-font-size(1.25);
+    font-weight: 700;
+
+    @include media-query($on-laptop) {
+      @include relative-font-size(1.125);
+    }
+  }
+  a {
+    border-bottom: 1px dashed $text-color;
+    &:hover {
+      border-bottom-style: solid;
+    }
+    &[href*="//"]:not([href*="flschaves.com"]) {
+      &::after {
+        content: '\f35d';
+        font-family: "Font Awesome 5 Free";
+        font-size: 12px;
+        font-weight: 900;
+        vertical-align: text-bottom;
+        padding-left: 4px;
+      }
+    }
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}

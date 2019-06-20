@@ -1,75 +1,14 @@
+---
+layout: default
+body_class: home
+---
 
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Filipe Chaves - Webdeveloper - Frontend ❤ WordPress</title>
-        <meta name="description" content="Frtonend webdeveloper, and in love with WordPress">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300">
-        <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-        <link rel="stylesheet" href="assets/css/normalize.css?v=7.0.0">
-        <link rel="stylesheet" href="assets/css/main.css?v=1.0.0">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <section class="main">
-            <div class="wrapper">
-                <div class="align">
-                    <header>
-                        <img class="profile" src="assets/images/flschaves.jpg" alt="Filipe Chaves">
-                        <h1>Filipe Luis Siems Chaves</h1>
-                    </header>
-                    <article>
-                        <p>Hi, I'm a webdeveloper who works with WordPress</p>
-                    </article>
-                    <footer>
-                        <div class="links">
-                            <a class="link" href="https://instagram.com/flschaves" target="_blank">
-                                <i class="fab fa-instagram"></i>
-                                instagram
-                            </a>
-
-                            <a class="link" href="https://facebook.com/flschaves" target="_blank">
-                                <i class="fab fa-facebook"></i>
-                                facebook
-                            </a>
-
-                            <a class="link" href="https://twitter.com/flschaves" target="_blank">
-                                <i class="fab fa-twitter"></i>
-                                twitter
-                            </a>
-
-                            <a class="link" href="https://github.com/flschaves" target="_blank">
-                                <i class="fab fa-github"></i>
-                                github
-                            </a>
-                        </div>
-                    </footer>
-                </div>
-            </div>
-        </section>
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-            ga('create', 'UA-50383040-1', 'flschaves.com');
-            ga('send', 'pageview');
-        </script>
-
-        <script>
-            if ( 'flschaves.com' == window.location.host && window.location.protocol != 'https:' ) {
-                window.location.protocol = 'https:';
-            }
-        </script>
-    </body>
-</html>
+<div class="profile">
+    <img src="{{ "/assets/images/flschaves.jpg" | relative_url }}" class="profile__image" alt="{{ site.author }}">
+    <h1 class="profile__name">{{ site.author }}</h1>
+    <p class="profile__description post-content">
+        Howdy! I'm a web developer working with WordPress,
+        and passionate about new technologies. 
+        <a href="{{ "blog" | relative_url }}">Click here</a> to see my latest posts.
+    </p>
+</div>
